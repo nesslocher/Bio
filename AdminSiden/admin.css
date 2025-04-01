@@ -1,0 +1,172 @@
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  background-color: rgb(88, 88, 88);
+  margin: 0;
+  padding: 2rem;
+}
+
+.hidden {
+  display: none;
+}
+
+/*login*/
+.login-wrapper {
+  max-width: 400px;
+  margin: 5rem auto;
+  background-color: #a5a5a5;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+.login-wrapper h2 {
+  margin-bottom: 1rem;
+}
+.login-wrapper input {
+  width: 100%;
+  padding: 0.7rem;
+  margin: 0.5rem 0;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+.login-wrapper button {
+  width: 100%;
+  padding: 0.7rem;
+  background: #353535;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.login-wrapper button:hover {
+  background: #252525;
+}
+
+
+
+.admin-panel {
+  max-width: 30%;
+  margin-left: 5%;
+  margin-right: auto;
+  padding: 2rem;
+  background-color: #a5a5a5;
+  border-radius: 10px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.05);
+  color: rgb(151, 23, 23);
+}
+.admin-panel h1 {
+  margin-top: 0;
+  text-align: center;
+}
+.film-admin {
+  background: #383030;
+  padding: 1rem 1.5rem;
+  margin-bottom: 2rem;
+  border-radius: 10px;
+  border-left: 6px solid #691d1d;
+}
+.film-admin h3 {
+  margin-top: 0;
+}
+.film-admin label {
+  
+  display: block;
+  margin: 0.5rem 0 0.2rem;
+  font-weight: 500;
+  
+}
+.film-admin input[type="number"],
+.film-admin input[type="date"],
+.film-admin select {
+  padding: 0.4rem;
+  margin-bottom: 0.5rem;
+  width: auto;
+  min-width: 140px;
+  border-radius: 6px;
+  border: 2px solid #691d1d;
+}
+.film-admin img.film-thumb {
+  display: block;
+  margin: 1rem auto;
+  width: 50%;
+  height: auto;
+  border-radius: 60px;
+  border: 6px solid #691d1d;
+}
+.visninger {
+  margin-top: 1rem;
+}
+.visning {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+.visning input[type="date"],
+.visning select {
+  padding: 0.3rem 0.5rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+/*slet knapperne*/
+.visning button {
+  background: rgb(61, 155, 131);
+  border: none;
+  color: white;
+  padding: 0.4rem 0.6rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.visning button:hover {
+  background: darkred;
+}
+
+
+.tilføj-visning {
+  background: #b15018;
+  color: #551313;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-weight: bold;
+  margin-top: 0.8rem;
+  cursor: pointer;
+  border: 3px solid #551313;
+}
+
+.tilføj-visning:hover {
+  background: #ee9c6c;
+  border: 3px solid #b32a2a;
+  color: #b32a2a;
+}
+
+
+#gemBtn {
+  display: block !important;
+  background: rgb(177, 152, 119) !important;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+  padding: 1rem;
+  font-size: 1rem;
+}
+#gemBtn:hover {
+  background: #9c9c9c;
+}
+
+/*responsive desgin*/
+@media (max-width: 600px) {
+  .visning {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  .film-admin {
+      padding: 1rem;
+  }
+}

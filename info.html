@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Om Biografen</title>
+    <link href="styles.css" rel="stylesheet" type="text/css"/>
+    <script src="java.js" defer></script>
+</head>
+
+<body class="info">
+
+    <nav>
+ <div class="nav-container">
+            <div class="nav-left">
+                <a href="index.html">
+                    <img src="Images/Andet/logoWhite.png" alt="Biograf Logo" class="logo">
+                </a>
+            </div>
+            <ul class="nav-right">
+                <li><a href="info.html">INFO</a></li>
+                <li><a href="AdminSiden/admin.html">ADMIN</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header>
+        <h1>Velkommen til Biografens Univers</h1>
+        <p>Her kan du læse om vores historie, faciliteter og hvordan du finder os.</p>
+    </header>
+
+    
+    <section id="historie">
+        <h2>Vores Historie</h2>
+        <p>Vores biograf har i årtier været et samlingspunkt for filmelskere med en særlig kærlighed til dansk filmhistorie. Fra stumfilmstiden til de ikoniske folkekomedier og klassiske dramaer – vi er stolte af at holde liv i de film, der har formet dansk kultur.</p>
+        <img src="Images/old bio.jpg" alt="Gammelt biografskilt fra 1950'erne" width="400" height="275">
+        <p>Biografen blev grundlagt i midten af det 20. århundrede med et ønske om at bevare og formidle de bedste danske film til nye generationer. I en tid, hvor biograferne blev domineret af internationale storfilm, valgte vi at gå en anden vej og dedikere os til de danske filmklassikere.</p>
+        <img src="Images/ParkBio.png" alt="Biografens facade i 1960'erne" width="400" height="275">
+        <p>I dag præsenterer vi et nøje udvalgt program med alt fra Carl Th. Dreyers kunstneriske mesterværker til Olsen-banden, Matador og Morten Korch-filmene. Vi arrangerer også temaaftener, hvor vi dykker ned i bestemte perioder af dansk filmhistorie.</p>
+        <img src="Images/filmplakater på væggene.jpg" alt="Biografsal med gamle filmplakater" width="400" height="275" >
+        <p>Vores mål er at give publikum en nostalgisk og unik oplevelse, hvor filmhistorien bliver levende igen på det store lærred.</p>
+        <img src="Images/Erindringsbio.jpg" alt="Publikum ser en gammel dansk film i biografen" width="500" height="275" >
+    </section>
+
+    <section id="beliggenhed">
+        <h2>Beliggenhed & Åbningstider</h2>
+        <p>Du finder os midt i byen på:</p>
+        <p><strong>Adresse:</strong> Papirfabrikken 10, 8600 Silkeborg</p>
+
+        <h3>Åbningstider:</h3>
+        <ul class="list">
+            <li>Mandag - Torsdag: 12:00 - 22:00</li>
+            <li>Fredag - Lørdag: 12:00 - 00:00</li>
+            <li>Søndag: 12:00 - 20:00</li>
+        </ul>
+    </section>
+
+    <section id="faciliteter">
+        <h2>Vores Faciliteter</h2>
+        <ul class="list">
+            <li>5 moderne sale med Dolby Atmos lyd</li>
+            <li>VIP-sæder med ekstra komfort</li>
+            <li>Café med snacks, popcorn og drikkevarer</li>
+            <li>Handicapvenlige adgangsforhold</li>
+            <li>Privat leje af sale til events</li>
+        </ul>
+    </section>
+
+    <iframe 
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2221.1187147061396!2d9.553921476436091!3d56.17234065959957!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x464b8b3e6497809f%3A0x8173a02226176140!2sPapirfabrikken%2010%2C%208600%20Silkeborg!5e0!3m2!1sda!2sdk!4v1742983634570!5m2!1sda!2sdk"
+    width="500" 
+    height="350" 
+    style="border:0;" 
+    allowfullscreen="" 
+    loading="lazy" 
+    referrerpolicy="no-referrer-when-downgrade">
+</iframe>
+
+<section id="kontakt">
+    <h2>Kontakt Os</h2>
+    <p>Har du spørgsmål eller ønsker du at booke en privat fremvisning? Kontakt os!</p>
+    <p><strong>Email:</strong> <a href="mailto:BioNaven@biograf.dk">BioNaven@biograf.dk</a></p>
+    <p><strong>Telefon:</strong> +45 12 23 56 78</p>
+
+    <form action="mailto:BioNaven@biograf.dk">
+        <label class="B-neon" for="fname">Fornavn</label>
+        <input type="text" autocomplete="off" id="fname" name="fornavn" placeholder="Dit fornavn..">
+
+        <label class="B-neon" for="lname">Efternavn</label>
+        <input type="text" autocomplete="off" id="lname" name="efternavn" placeholder="Dit efternavn name..">
+
+        <label class="B-neon" for="email">Email</label>
+        <input type="text" autocomplete="off" id="email" name="email" placeholder="Din email...">
+
+
+        <label class="B-neon" for="problem">Problem</label>
+        <select id="problem" name="problem">
+          <option value="" disabled selected>Vælg problem</option>
+          <option value="wrongmovie">Jeg har fået billetter til den forkerte film</option>
+          <option value="wrongtime">Filmen starter på et forkert tidspunkt i forhold til min billet</option>
+          <option value="missingitem">Jeg har ikke modtaget mine billetter, eller jeg har mistet min bille</option>
+          <option value="illegal">Min billet er ugyldig eller blevet afvist (f.eks. kopieret billet eller ugyldig kode)</option>
+          <option value="question">Jeg har spørgsmål vedrørende min billet eller bestilling (f.eks. ændring af billetter, refundering, osv.)</option>
+        </select>
+
+        <label class="B-neon" for="subject">Emne</label>
+        <textarea id="subject" name="subject" autocomplete="off" placeholder="Skriv noget..." style="height:200px"></textarea>
+
+        <input type="submit" value="Submit">
+    </form>
+
+</section>
+
+    <footer>
+        <p>&copy; 2025 Biografen - Alle rettigheder forbeholdes</p>
+    </footer>
+
+</body>
+</html>

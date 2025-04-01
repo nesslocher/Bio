@@ -1,0 +1,742 @@
+/*generelØ*/
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    padding-top: 10vh;
+    background-color: rgb(32, 32, 32);
+    color: #00ccff;
+    font-weight: bold;
+    
+
+}
+
+header {
+    background-color: #2a2a2a;
+    color: #00ccff;
+    
+    text-align: center;
+    padding: 40px;
+}
+header h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    
+}
+header p {
+    font-size: 1.2em;
+}
+
+
+/*nav*/
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 8vh;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    padding: 0 2vw;
+    display: flex;
+    align-items: center;
+}
+.nav-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    max-width: 90vw;
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+}
+.nav-left img.logo {
+    height: 15vh;
+    max-width: 10vw;
+    object-fit: contain;
+    position: absolute;
+    top: -3vh;
+    left: 2vw;
+    z-index: 1001;
+    pointer-events: auto;
+}
+.nav-right {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+}
+.nav-right li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.125rem;
+    font-weight: bold;
+    padding: 0.625rem 1rem;
+    border-radius: 0.5rem;
+    transition: background 0.3s;
+    animation: pulsGlow 1s infinite alternate ease-in-out;
+}
+.nav-right li a:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+
+
+
+
+body.info section {
+    max-width: 1200px;
+    margin: auto;
+    padding: 40px 20px;
+}
+body.info section h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+body.info section p, body.info section ul {
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+body.info section img {
+    max-width: 100%;
+    height: auto;
+    margin: 20px 0;
+    float: right;
+    margin-left: 20px;
+    border-radius: 8px;
+}
+
+#beliggenhed,
+#faciliteter ul,
+#kontakt ul,
+#faciliteter p,
+#kontakt p {
+    text-align: center;
+    margin: 0 auto;
+    max-width: 600px;
+}
+
+.list{
+    list-style-type: none;
+    padding: 0;
+}
+
+#faciliteter ul li,
+#kontakt p {
+    margin-bottom: 10px;
+}
+
+iframe {
+    margin: 40px auto;
+    display: block;
+    border-radius: 8px;
+}
+
+
+footer {
+    background-color: #333;
+    color: #00ccff;
+    text-align: center;
+    padding: 20px;
+}
+footer p {
+    font-size: 1.1em;
+}
+
+
+/*slidern*/
+.slide-section {
+    position: relative;
+    top: 10px; 
+    left: 0;
+    width: 100%;
+    height: 70vh;
+    overflow: hidden;
+    z-index: 1;
+    margin-bottom: 2rem;
+    border-top: 15px solid #030303;
+    border-bottom: 15px solid #000000;
+}
+
+
+
+
+
+/*datoerne*/
+.date-selector {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+.date-selector button {
+    flex: 1 1 120px;
+    max-width: 150px;
+    height: auto;
+    margin-right: 1rem;
+
+    background-color: #292929;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    padding: 0.75rem 1.25rem;
+    border-radius: 10px;
+    font-size: 14px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    animation: pulsGlow 2s infinite alternate ease-in-out;
+    
+}
+.date-selector button:hover {
+    scale: 0.9;
+    background-color: #1d1d1d;
+    border: 1px solid #ffffff;
+    box-shadow:
+    0 0 10px #00ccff,
+     0 0 20px #00ccff;
+     
+}
+
+
+
+.feature-kasser {
+    display: flex;
+    justify-content: space-around;
+    gap: 4rem;
+    padding: 4rem 2rem;
+    background-color: #1f1f1f;
+    flex-wrap: wrap;
+    border-top: 3px solid #ffffff;
+    border-bottom: 3px solid #ffffff;
+    margin-bottom: 2rem;
+}
+.feature-kasse {
+    position: relative;
+    flex: 1 1 300px;
+    background: linear-gradient(145deg, #3a3a3a, #1e1e1e);
+    color: #00ccff;
+    padding: 2rem;
+    border-radius: 12px;
+    border: 3px solid #ffffff;
+    box-shadow:
+        0 0 10px #00ccff,
+        0 0 20px #00ccff,
+        0 0 30px #00ccff;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    cursor: pointer;
+    z-index: 1;
+
+
+    overflow: hidden;
+    max-height: 20em; 
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+    position: relative;
+}
+.feature-kasse:hover {
+    box-shadow: 0 8px 25px rgba(255,255,255,0.1);
+    max-height: 100%;
+
+}
+.feature-kasse h3 {
+    font-size: 1.5em;
+    margin-bottom: 2rem;
+    color: #00ccff;
+}
+.feature-kasse p {
+    font-size: 1em;
+    line-height: 1.6;
+}
+
+/*nyhederne*/
+.nyhedsfilm-wrapper {
+    display: flex;
+    gap: 1em;
+    margin-top: 1em;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.nyhedsfilm-item {
+    position: relative;
+    width: 150px;
+    height: 220px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 0 10px cyan;
+}
+
+.nyhedsfilm-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+.nyhedsfilm-item:hover img {
+    transform: scale(1.05);
+}
+.nyhedsfilm-overlay {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0,0,0,0.6);
+    color: cyan;
+    padding: 0.5em;
+    font-size: 0.8em;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+/*bevægende billeder i baggrunden*/
+.filmrulle-baggrund {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; 
+    pointer-events: none; 
+    overflow: hidden;
+}
+.filmrulle {
+    position: absolute;
+    opacity: 70%;
+    width: 400px;
+    height: auto;
+    transition: transform 0.5s ease;
+    animation: gyng 6s ease-in-out infinite;
+}
+.filmrulle-1 {
+    top: 5%;
+    left: -10%;
+    transform: rotate(-40deg);
+    width: 60%;
+    animation-delay: 1s;
+}
+.filmrulle-2 {
+    top: 5%;
+    right: -30%;
+    transform: rotate(30deg);
+    width: 50%;
+    animation-delay: 2s;
+}
+.filmrulle-3 {
+    bottom: 5%;
+    left: 10%;
+    transform: rotate(-10deg);
+    width: 40%;
+    animation-delay: 3s;
+}
+
+
+.film-container {
+    max-width: 70%;
+    margin: 0 auto;
+    background-color: #464545;
+    border-radius: 12px;
+    box-shadow:
+             0 0 10px #00ccff,
+              0 0 20px #00ccff,
+               0 0 30px #00ccff;
+    padding: 2rem;
+    border: 2px solid #ffffff;
+    margin-bottom: 5%;
+    
+    overflow: visible; 
+    position: relative; 
+    overflow: visible; 
+
+}
+.program-section,
+.kommende-section {
+    margin-bottom: 3rem;
+}
+.program-section h1,
+.kommende-section h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #0066cc;
+    padding-bottom: 0.5rem;
+    color: #222;
+    
+}
+.film-liste,
+.kommende-film-liste {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    padding: 2rem;
+
+    align-items: stretch;
+    
+}
+.film-kort {
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    background: rgb(54, 54, 54);
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    padding: 0;
+    text-align: center;
+    border: 2px solid #ffffff;
+    
+}
+.film-kort:hover {
+    transform: scale(1.05);
+    z-index: 10;
+}
+.film-kort img {
+    margin-top: 3rem;
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+}
+.film-info {
+    padding: 0.5rem 0;
+    
+}
+.film-info h3 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 0.5rem 1rem;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fdfdfd;
+    font-size: 1.2rem;
+    text-shadow: 0 0 10px #00ccff;
+    z-index: 2;
+    margin: 0;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    animation: pulsGlow 1s infinite alternate ease-in-out;
+}
+.se-mere-knap {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #747474;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    text-decoration: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.film-kort:hover .se-mere-knap {
+    opacity: 1;
+}
+.film-wrapper + .film-wrapper {
+    margin-top: 4rem; 
+}
+
+
+
+.visningstider {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: #0085a7;
+    font-weight: bold;
+}
+
+.visningstider ul {
+    padding-left: 1rem;
+    list-style: disc;
+    margin: 0;
+    
+}
+.ingen-visning {
+    font-style: italic;
+    color: #999;
+}
+.visningstider ul li {
+    font-weight: bold;
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 0.5rem 1rem;
+    border: 2px solid #00ccff;
+    border-radius: 8px;
+    display: inline-block;
+    margin: 0.3rem;
+    text-shadow:
+        0 0 5px #00ccff,
+        0 0 10px #00ccff,
+        0 0 20px #00ccff;
+
+    box-shadow:
+        0 0 5px #00ccff,
+        0 0 15px #00ccff;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+    font-size: 1rem;
+    
+}
+
+
+.B-neon{
+    color: white;
+    animation: pulsGlow 2s infinite alternate ease-in-out;
+}
+
+
+
+.vis-mere-wrapper {
+    text-align: center;
+    margin-top: 90%;
+}
+.vis-mere-knap {
+    background-color: #292929;
+    color: white;
+    border: 2px solid #ffffff;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.vis-mere-knap:hover {
+    background-color: #414141;
+    
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 2em;
+    color: white;
+    padding: 0 1rem;
+    cursor: pointer;
+    
+}
+
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: blue;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: blue;
+  text-shadow:
+  0 0 5px #00ccff,
+  0 0 10px #00ccff,
+  0 0 20px #00ccff;
+
+box-shadow:
+  0 0 5px #00ccff,
+  0 0 15px #00ccff;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+
+@keyframes gyng {
+    0%   { transform: rotate(-20deg); }
+    50%  { transform: rotate(20deg); }
+    100% { transform: rotate(-20deg); }
+}
+@keyframes pulsGlow {
+    0% {
+        text-shadow:
+            0 0 5px #00ccff,
+            0 0 10px #00ccff,
+            0 0 15px #00ccff;
+    }
+    100% {
+        text-shadow:
+            0 0 10px #00ccff,
+            0 0 20px #00ccff,
+            0 0 30px #00ccff;
+    }
+}
+
+
+
+
+/*feature-kasser - hovereffekten*/
+.feature-kasse {
+    max-height: 220px;
+    overflow: hidden;
+    transition: max-height 0.5s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+/*hpver fold-ud – kun på desktop(mus)*/
+@media (hover: hover) and (pointer: fine) {
+    .feature-kasse:hover {
+        max-height: 1000px;
+        box-shadow:
+            0 0 20px #00ccff,
+            0 0 30px #00ccff,
+            0 0 40px #00ccff;
+    }
+}
+
+/*mobil og tablets – altid foldet ud*/
+@media screen and (max-width: 768px) {
+    .feature-kasse {
+        max-height: none;
+        overflow: visible;
+    }
+}
+
+
+/*Desktop: 4 kolonner*/
+.film-liste,
+.kommende-film-liste {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    padding: 2rem;
+}
+
+/*tablet: 2 kolonner*/
+@media screen and (max-width: 1024px) {
+    .film-liste,
+    .kommende-film-liste {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/*nobil:2 kolonner, bare mindre*/
+@media screen and (max-width: 600px) {
+    .film-liste,
+    .kommende-film-liste {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    .film-kort {
+        font-size: 0.9rem;
+        padding-bottom: 2rem;
+        position: relative;
+    }
+
+    .film-kort img {
+        margin-top: 1.5rem;
+    }
+
+    .film-info h3 {
+        font-size: 1rem;
+        padding: 0.4rem;
+    }
+
+    .se-mere-knap {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.8rem;
+    }
+
+    /*fører visningstider henover billederne - for mere kompakt design*/
+    .visningstider {
+        position: absolute;
+        bottom: 0.5rem;
+        left: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.6);
+        padding: 0.5rem;
+        z-index: 2;
+        text-align: center;
+        font-size: 0.75rem;
+    }
+    .visningstider ul {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+    .visningstider ul li {
+        display: inline-block;
+        margin: 0.2rem;
+        padding: 0.3rem 0.6rem;
+        font-size: 0.75rem;
+        border-radius: 5px;
+        border: 1px solid #00ccff;
+        background-color: rgba(0, 0, 0, 0.4);
+        color: white;
+        box-shadow: 0 0 5px #00ccff;
+        text-shadow: 0 0 5px #00ccff;
+    }
+}
+
+/*for sektionerne*/
+@media screen and (max-width: 768px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    header p {
+        font-size: 1.1em;
+    }
+
+    section {
+        padding: 30px 10px;
+    }
+
+    section h2 {
+        font-size: 1.8em;
+    }
+
+    section p, section ul {
+        font-size: 1em;
+    }
+
+    section img {
+        max-width: 90%;
+        float: none;
+        display: block;
+        margin: 20px auto;
+    }
+
+    footer p {
+        font-size: 1em;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    header h1 {
+        font-size: 1.5em;
+    }
+
+    section h2 {
+        font-size: 1.6em;
+    }
+
+    section p, section ul {
+        font-size: 0.9em;
+    }
+}

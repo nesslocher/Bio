@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filmvisning</title>
+    <link rel="stylesheet" href="film.css">
+    <script src="film.js" defer></script>
+</head>
+<body>
+    <main class="film-detalje">
+        <div id="filmContainer"></div>
+    </main>
+
+
+    <section id="salSection" class="biograf-sal">
+        <h2>Vælg din visning</h2>
+        <form id="bestilForm">
+          <label for="tidspunkt">Tidspunkt og sal:</label>
+          <select id="tidspunkt" required></select>
+          <br><br>
+          <button type="submit">Gå til sædevalg</button>
+        </form>
+      
+        <div id="sædevalgWrapper" class="hidden">
+          <h3>Vælg dine sæder</h3>
+          <div id="sædeGrid" class="sæde-grid"></div>
+          <button id="bekræftKøb" class="hidden">Bekræft booking</button>
+        </div>
+      </section>
+      
+
+
+    <div class="luk-vindue-wrapper">
+        <button onclick="window.close()">Luk vindue</button>
+    </div>
+
+</body>
+</html>

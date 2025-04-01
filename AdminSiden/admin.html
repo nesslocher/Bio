@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+    <div class="login-wrapper" id="loginWrapper">
+        <h2>Admin Login</h2>
+        <form id="loginForm">
+
+            <input type="text" id="username" placeholder="Brugernavn" required>
+
+            <input type="password" id="password" placeholder="Adgangskode" required>
+
+            <button type="submit">Log ind</button>
+
+        </form>
+    </div>
+
+    <div class="admin-panel hidden" id="adminPanel">
+        <h1>Administrer Filmvisninger</h1>
+        
+        <div id="filmList"></div> 
+        <button id="gemBtn">Gem Ændringer</button>
+    </div>
+
+    <script src="admin.js"></script>
+</body>
+</html>

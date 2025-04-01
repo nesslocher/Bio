@@ -1,0 +1,360 @@
+body {
+    margin: 0;
+    padding-top: 10vh;
+    background-color: rgb(32, 32, 32);
+    font-family: Arial, sans-serif;
+    color: #00ccff;
+    font-weight: bold;
+}
+
+main.film-detalje {
+    max-width: 70%;
+    margin: 12vh auto 4rem auto;
+    padding: 2rem;
+    background: #1f1f1f;
+    border-radius: 12px;
+    box-shadow: 0 0 20px #00ccff;
+    border: 2px solid #ffffff;
+}
+
+
+main.film-detalje h3,
+.film-tekst h3,
+.højre-side h3,
+#salSection h2 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ffffff;
+    text-shadow:
+        0 0 5px #00ccff,
+        0 0 10px #00ccff,
+        0 0 20px #00ccff;
+    border-bottom: 2px solid #00ccff;
+    padding-bottom: 0.3rem;
+    margin-bottom: 1rem;
+}
+
+
+/*billede og trailer*/
+.film-billede {
+    width: 100%;
+    max-height: 570px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+    border: 2px solid #00ccff;
+}
+
+.trailer-wrapper {
+    width: 100%;
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    margin-bottom: 2rem;
+}
+.trailer-wrapper:hover {
+    animation: trailerGlow 1s infinite ease-in-out;
+    border-radius: 12px;
+}
+
+.trailer-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    border: none;
+}
+
+/*Film layout*/
+.film-indhold {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5%;
+}
+.venstre-side, .højre-side {
+    flex: 1;
+    min-width: 250px;
+    padding: 1%;
+}
+.venstre-side {
+    flex: 0 0 35%;
+    max-width: 35%;
+    padding: 1%;
+}
+
+.højre-side {
+    flex: 1;
+    min-width: 250px;
+    padding: 1%;
+    margin-right: 5%;
+}
+
+
+.højre-side h3 {
+    margin-top: 2rem;
+    color: #00ccff;
+}
+
+.info-item.hidden {
+    display: none;
+}
+
+.film-info-grid {
+    margin: 1em 0 20px;
+}
+
+.info-wrapper {
+    border: 2px solid #00ccff;
+    border-radius: 8px;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px 20px;
+    margin-bottom: 10px;
+    background-color: #2a2a2a;
+}
+
+.info-item ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.info-item li {
+    margin-bottom: 4px;
+}
+
+.info-item strong {
+    display: block;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 6px;
+    text-shadow:
+        0 0 5px #00ccff,
+        0 0 10px #00ccff,
+        0 0 20px #00ccff;
+    border-bottom: 1px solid #00ccff;
+    padding-bottom: 4px;
+}
+
+.film-tekst {
+    margin-top: 2rem;
+    border: 2px solid #00ccff;
+    border-radius: 8px;
+    padding: 1rem;
+    background-color: #2a2a2a;
+}
+.film-tekst h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: #00ccff;
+}
+.film-tekst p {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+#toggleInfoBtn {
+    background-color: #292929;
+    color: white;
+    border: 2px solid #ffffff;
+    padding: 0.6rem 1.2rem;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+#toggleInfoBtn:hover {
+    background-color: #1d1d1d;
+    box-shadow: 0 0 10px #00ccff;
+}
+
+/*bestillingssektion*/
+.biograf-sal {
+    background-color: #1f1f1f;
+    padding: 4rem 2rem;
+    text-align: center;
+    border-top: 4px solid #00ccff;
+    color: #00ccff;
+}
+
+#salSection h2 {
+    margin-bottom: 1rem;
+}
+
+#tidspunkt {
+    padding: 0.5rem;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ffffff;
+    background-color: #292929;
+    color: #ffffff;
+}
+
+#bestilForm button {
+    margin-top: 1rem;
+    background-color: #292929;
+    color: white;
+    padding: 0.6rem 1.2rem;
+    font-size: 16px;
+    border: 2px solid #ffffff;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+#bestilForm button:hover {
+    background-color: #1d1d1d;
+    box-shadow: 0 0 10px #00ccff;
+}
+
+
+
+
+
+
+
+/*Sæder*/
+.sæde-grid {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 10px;
+    max-width: 300px;
+    margin: 20px auto; 
+    justify-content: center;
+}
+.sæde {
+    width: 100%;
+    padding-top: 100%; /* Gør dem kvadratiske */
+    background: linear-gradient(to top, #1f1f1f, #2a2a2a);
+    position: relative;
+    cursor: pointer;
+    border-radius: 10px 10px 4px 4px;
+    border: 2px solid #00ccff;
+    box-shadow: inset 0 -4px 8px rgba(0, 0, 0, 0.5);
+    transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+}
+.sæde::before {
+    content: "";
+    position: absolute;
+    top: 8%;
+    left: 10%;
+    width: 80%;
+    height: 30%;
+    background-color: #444;
+    border-radius: 6px 6px 2px 2px;
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.5);
+}
+.sæde.valgt {
+    background: #00ccff;
+    box-shadow: 0 0 10px #00ccff, 0 0 20px #00cc88;
+    border-color: #00ccff;
+}
+
+.sæde.optaget {
+    background: #555;
+    border-color: #999;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+.sæde:hover:not(.optaget):not(.valgt) {
+    background: linear-gradient(to top, #2c2c2c, #3a3a3a);
+    box-shadow:
+        0 0 8px #00ccff,
+        0 0 16px #00ccff;
+    transform: scale(1.05);
+}
+.sæde.valgt {
+    background-color: #2e8ee7;
+}
+.sæde.optaget {
+    background-color: #555;
+    cursor: not-allowed;
+}
+
+
+
+
+
+
+
+
+
+
+.hidden {
+    display: none;
+}
+
+/* Luk vindue */
+.luk-vindue-wrapper {
+    text-align: center;
+    margin-top: 2rem;
+}
+.luk-vindue-wrapper button {
+    background-color: #292929;
+    color: white;
+    border: 2px solid #ffffff;
+    padding: 0.6rem 1.2rem;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+.luk-vindue-wrapper button:hover {
+    background-color: #1d1d1d;
+    box-shadow: 0 0 10px #00ccff;
+}
+
+
+
+@keyframes trailerGlow {
+    0% {
+        box-shadow: 0 0 10px #00ccff;
+    }
+    50% {
+        box-shadow: 0 0 20px #00ccff, 0 0 40px #00ccff;
+    }
+    100% {
+        box-shadow: 0 0 10px #00ccff;
+    }
+}
+
+
+
+/*Responsivt design*/
+@media (max-width: 768px) {
+    main.film-detalje {
+        margin: 2vh 1rem;
+        padding: 1rem;
+        max-width: 95%;
+    }
+
+    .film-indhold {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .venstre-side, .anmeldelser, .højre-side {
+        min-width: 100%;
+    }
+
+    .film-billede {
+        max-height: 250px;
+        object-fit: contain;
+        transition: transform 0.3s ease;
+    }
+
+    .film-billede:hover {
+        transform: scale(1.05);
+    }
+
+    .biograf-sal {
+        padding: 2rem 1rem;
+    }
+
+    #tidspunkt, #bestilForm button {
+        width: 100%;
+    }
+}
